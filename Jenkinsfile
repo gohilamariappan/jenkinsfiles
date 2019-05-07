@@ -3,8 +3,11 @@ node('master') {
 
 try {
 
-   stage('Checkout'){
-git branch: prod, url: 'https://github.com/gohilamariappan/testproject.git'
+   stage('Checkout'){ 
+      checkout([
+      $class: 'GitSCM', branches: [[name: '*/demo']],
+      userRemoteConfigs: [[url: 'https://github.com/gohilamariappan/testproject.git'],[credentialsId:'jenkinsmaster']]
+  ])
    }
 
 
