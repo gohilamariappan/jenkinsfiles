@@ -4,8 +4,7 @@ node('master') {
 try {
 
    stage('Checkout'){
-
-      checkout scm
+git branch: prod, url: 'https://github.com/gohilamariappan/testproject.git'
    }
 
 
