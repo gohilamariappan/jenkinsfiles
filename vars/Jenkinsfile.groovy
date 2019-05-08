@@ -1,5 +1,5 @@
-def call() {
-
+def call(body) {
+body()
 node('master') {
 
 try {
