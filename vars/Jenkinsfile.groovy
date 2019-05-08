@@ -1,7 +1,4 @@
-def call(body) {
-
-        
-        body()
+def call() {
 
 node('master') {
 
