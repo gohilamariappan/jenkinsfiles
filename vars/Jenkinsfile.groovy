@@ -6,6 +6,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
+      sh 'echo hello'
       
    }
 }
