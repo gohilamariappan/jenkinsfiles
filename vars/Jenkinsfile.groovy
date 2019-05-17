@@ -8,6 +8,7 @@ try {
    stage('Checkout'){ 
       checkout scm
       sh 'echo $test'
+      sh 'echo $deploy'
       
    }
 }
