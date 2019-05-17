@@ -9,7 +9,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
-      sh 'echo config.first'
+      sh 'echo ${config.first}'
       
    }
 }
