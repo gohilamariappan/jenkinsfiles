@@ -4,7 +4,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
-      echo %GIT_COMMIT% is cloned
+      echo ${GIT_COMMIT}
    }
 }
 
