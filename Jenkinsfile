@@ -4,6 +4,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
+      sh'echo $GIT_COMMIT is cloned'
    }
 }
 
