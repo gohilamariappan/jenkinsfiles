@@ -7,7 +7,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
-      sh 'echo $first'
+      sh 'echo $test'
       
    }
 }
