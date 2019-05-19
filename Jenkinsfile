@@ -4,7 +4,7 @@ try {
 
    stage('Checkout'){ 
       checkout scm
-      echo ${GIT_COMMIT}
+      echo ${git.commit.id.abbrev}
    }
 }
 
