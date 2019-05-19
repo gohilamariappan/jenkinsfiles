@@ -3,8 +3,11 @@ node('master') {
 try {
 
    stage('Checkout'){ 
-      checkout scm
-      sh 'echo "${git.commit.id.abbrev}"'
+       scmInfo = checkout scm
+
+        /*...*/
+        echo "scm : ${scmInfo}"
+        echo "${scmInfo.GIT_COMMIT}"
    }
 }
 
