@@ -3,11 +3,15 @@ node('master') {
 try {
 
    stage('Checkout'){ 
-       scmInfo = checkout scm
+        checkout scm
+      
+  sh "git rev-parse --short HEAD > .git/commit-id".trim()
+       commit_id = readFile('.git/commit-id')
 
-        /*...*/
+
+        /*
         echo "scm : ${scmInfo}"
-        echo "${scmInfo.GIT_COMMIT}"
+        echo "${scmInfo.GIT_COMMIT}" */
    }
 }
 
