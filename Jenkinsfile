@@ -8,7 +8,7 @@ try {
   /*sh "git rev-parse --short HEAD > .git/commit-id".trim()
        commit_id = readFile('.git/commit-id')*/
 
-    def commit_id=${scmInfo.GIT_COMMIT}
+    def commit_id = '${scmInfo.GIT_COMMIT}'
       echo "id: ${commit_id}"
     
    }
