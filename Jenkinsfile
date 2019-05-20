@@ -8,7 +8,7 @@ try {
    stage('Checkout'){ 
        def scmVars = checkout scm
         def COMMIT= ${scmVars.GIT_COMMIT}
-            echo "$ COMMIT"
+      echo "${COMMIT}"
 
    }
 }
