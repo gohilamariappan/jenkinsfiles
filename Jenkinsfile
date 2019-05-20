@@ -7,7 +7,7 @@ try {
 
    stage('Checkout'){ 
         scmInfo = checkout scm
-      sh '''Commit=$(echo ${scmInfo.GIT_COMMIT})
+      sh '''Commit= ${{scmInfo.GIT_COMMIT}}
         echo $Commit'''
       
   /*
