@@ -6,15 +6,9 @@ node('master') {
 try {
 
    stage('Checkout'){ 
-        scmInfo = checkout scm
-      sh '''Commit= ${{scmInfo.GIT_COMMIT}}
-        echo $Commit'''
-      
-  /*
+       def scmVars = checkout scm
+        echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"
 
-    def commit_id = '${scmInfo.GIT_COMMIT}'
-      echo "id: ${commit_id}" */
-    
    }
 }
 
