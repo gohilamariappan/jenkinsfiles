@@ -1,3 +1,6 @@
+#!groovy
+def Commit
+
 node('master') {
 
 try {
