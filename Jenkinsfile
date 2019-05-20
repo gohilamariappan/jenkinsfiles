@@ -10,8 +10,9 @@ try {
 
     sh'''
             commit_id=${scmInfo.GIT_COMMIT}
-    echo "id: ${commit_id}"
+    
      '''
+      echo "id: ${commit_id}"
     
    }
 }
