@@ -10,7 +10,7 @@ try {
     
        checkout scm
       sh '''
-      comit= $(git rev-list -1 demo)
+      comit= $(git rev-list -1 /vars/Jenkinsfile.groovy)
       echo $comit
 '''
 
