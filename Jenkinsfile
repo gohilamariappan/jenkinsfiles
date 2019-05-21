@@ -8,7 +8,7 @@ try {
   
        checkout scm
       sh ' commit=$( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) '
-      sh 'echo ${commit}'
+      echo "${commit}"
 
       
   
