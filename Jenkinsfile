@@ -7,7 +7,11 @@ try {
    stage('Checkout'){
   
      def scmVars = checkout scm
-      sh 'echo $ (scmVars.GIT_COMMIT) '
+      		  sh''' commit_id=$(git rev-list origin/demo -1 vars/Jenkinsfile.groovy | cut -c1-8)
+              echo $commit_id
+              '''
+
+
       //sh'echo $(git rev-list origin/demo -1 vars/Jenkinsfile.groovy | cut -c1-8)'
          
   
