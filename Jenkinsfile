@@ -4,12 +4,12 @@ node('master') {
 
 try {
 
-
    stage('Checkout'){
     
        checkout scm
       sh '''
-      comit= $(git rev-list -1 vars/Jenkinsfile.groovy)
+      comit= $(git rev-parse --short HEAD vars/Jenkinsfile.groovy) 
+
       echo $comit
 '''
 
