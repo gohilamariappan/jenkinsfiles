@@ -10,7 +10,7 @@ try {
       sh '''
       comit= $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) 
 
-      echo $(comit)
+      echo "$(comit)"
 '''
 
       
