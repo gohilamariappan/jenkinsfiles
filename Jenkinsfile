@@ -7,12 +7,9 @@ try {
    stage('Checkout'){
     
        checkout scm
-      sh '''
-      comit= $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) 
+      sh 'comit= $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) '
 
-'''
-
-           echo $comit
+           sh 'echo $comit'
  
   
    }
