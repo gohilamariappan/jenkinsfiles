@@ -14,10 +14,8 @@ try {
    }
    
    stage('Checkout'){
-    
-      withCredentials([string(credentialsId: 'pwd', variable: 'aws_cred')]) {
-                      set +x
-      sh 'echo $aws_cred'
+    withCredentials([string(credentialsId: 'pwd', variable: 'PW1')]) {
+    echo "My password is '${PW1}'!"
 }
   
    }
