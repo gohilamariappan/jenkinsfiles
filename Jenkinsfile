@@ -9,6 +9,11 @@ try {
    stage('Checkout'){
     
        checkout scm
+      sh '''
+      comit= $(git rev-list -1 demo)
+      echo $comit
+'''
+
       
   
    }
