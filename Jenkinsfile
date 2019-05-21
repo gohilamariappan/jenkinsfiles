@@ -10,19 +10,13 @@ try {
       sh '''
       comit= $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) 
 
-      echo $comit
+      echo $(comit)
 '''
 
       
   
    }
-   
-   stage('Checkout'){
-    withCredentials([string(credentialsId: 'pwd', variable: 'PW1')]) {
-    echo "My password is '${PW1}'!"
-}
   
-   }
 }
 
 catch (err) {
