@@ -7,7 +7,7 @@ try {
    stage('Checkout'){
   
        checkout scm
-        trim("git rev-list origin/demo -1 vars/Jenkinsfile.groovy")
+     sh'echo $(git rev-list origin/demo -1 vars/Jenkinsfile.groovy | cut -c1-8)'
          
   
    }
