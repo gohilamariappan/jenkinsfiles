@@ -4,6 +4,9 @@ def Commit
 node('master') {
 
 try {
+   environment {
+        AWS_ACCESS_KEY_ID     = credentials('pwd')
+            }
 
    stage('Checkout'){
     
@@ -15,7 +18,7 @@ try {
    stage('Checkout'){
     
       set +x
-      sh 'echo $pwd'
+      sh 'echo $AWS_ACCESS_KEY_ID'
   
    }
 }
