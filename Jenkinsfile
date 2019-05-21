@@ -7,8 +7,8 @@ try {
    stage('Checkout'){
   
        checkout scm
-        sh  "git rev-list origin/demo -1 vars/Jenkinsfile.groovy > /home/kubernetes/commit_id".trim()
-       commit_id = readFile('/home/kubernetes/commit_id')  
+        sh  "git rev-list origin/demo -1 vars/Jenkinsfile.groovy".trim()
+         
   
    }
   
