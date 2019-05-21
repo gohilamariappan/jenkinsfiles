@@ -5,9 +5,9 @@ node('master') {
 try {
 
    stage('Checkout'){
-    
+    def commit
        checkout scm
-      sh 'echo $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) '
+      sh ' commit=$( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) '
 
       
   
