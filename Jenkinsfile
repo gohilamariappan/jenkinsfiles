@@ -8,7 +8,7 @@ try {
     
        checkout scm
       sh '''
-      comit= $(git rev-parse --short HEAD vars/Jenkinsfile.groovy) 
+      comit= $( git rev-list origin/demo -1 vars/Jenkinsfile.groovy ) 
 
       echo $comit
 '''
