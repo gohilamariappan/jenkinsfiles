@@ -1,5 +1,4 @@
 #!groovy
-def Commit
 
 node('master') {
 
@@ -10,7 +9,7 @@ try {
     
        checkout scm
       sh '''
-      comit= $(git rev-list -1 /vars/Jenkinsfile.groovy)
+      comit= $(git rev-list -1 vars/Jenkinsfile.groovy)
       echo $comit
 '''
 
