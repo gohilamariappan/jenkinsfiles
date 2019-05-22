@@ -7,7 +7,7 @@ try {
   
      checkout scm
       sh''' commit_id=$(git log -2 --format=%h)
-              $commit_id> commit_id.txt
+              commit_id> commit_id.txt
               
               '''
       
