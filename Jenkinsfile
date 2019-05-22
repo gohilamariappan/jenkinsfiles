@@ -11,8 +11,8 @@ try {
               '''
       
       		  /*sh''' commit_id=$(git rev-list origin/demo -1 demo | cut -c1-8)
-              echo $commit_id*/
-              ''' 
+              echo $commit_id
+                            ''' */ 
           }
          
   
