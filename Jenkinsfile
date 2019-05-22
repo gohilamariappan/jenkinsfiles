@@ -6,7 +6,7 @@ try {
    stage('Checkout'){
   
      checkout scm
-      sh''' commit_id=$(git log | head 1)
+      sh''' commit_id=$(git log | heads -1)
               echo $commit_id
               '''
       
