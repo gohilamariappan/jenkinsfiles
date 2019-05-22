@@ -9,7 +9,7 @@ try {
       sh''' commit_id=$(git log -2 --format=%h)
               echo $commit_id
               '''
-      
+      archiveArtifacts 'commit_id'
       		  /*sh''' commit_id=$(git rev-list origin/demo -1 demo | cut -c1-8)
               echo $commit_id
                             ''' */ 
