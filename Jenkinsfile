@@ -14,10 +14,7 @@ try {
               echo $commit_id*/
               ''' 
           }
-           stage('build'){
-  
-      sh 'echo $commit_id '
-              }
+         
   
 }
 
